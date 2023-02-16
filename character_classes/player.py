@@ -1,5 +1,3 @@
-from character_class import Character
-
 
 class Player:
     hp = 100
@@ -7,6 +5,14 @@ class Player:
     def __init__(self, name, char):
         self._name = name
         self._char = char
+
+    @classmethod
+    def attack(cls):
+        print("Player attacked!")
+
+    @classmethod
+    def defend(cls):
+        print("Player defended!")
 
     @property
     def get_name(self):
@@ -27,8 +33,3 @@ class Player:
     #     else:
     #         print("Invalid character class")
 
-    def attack(self):
-        print("Player attacked!")
-
-    def defend(self):
-        print("Player defended!")
